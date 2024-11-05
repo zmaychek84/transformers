@@ -1,0 +1,10 @@
+{
+  "passes": [
+    {
+      "name": "matmul_nbits",
+      "plugin": "vaip-pass_matmul_nbits",
+      "enable_gc": true,
+      "disabled": false
+    }
+  ]
+}

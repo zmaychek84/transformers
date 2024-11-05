@@ -1,0 +1,16 @@
+*/diffusion_onnx
+*/diffusion_onnx_quant
+*/diffusion_onnx_quant_ort
+*/profile*
+*.onnx
+*.onnx.data
+*.png
+*/*.onnx
+*/*.onnx.data
+*/*.png
+*/*TensorsData.json
+*/vitisai_ep_report.json
+*/__pycache__/*
+*/*.pyc
+*.pyc
+*/onnxruntime_profile*

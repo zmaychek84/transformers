@@ -1,0 +1,423 @@
+{
+  "owner": "sumitn",
+  "setup": [],
+  "test_steps": [
+    {
+      "name": "llama-2-7b_fast_attention",
+      "command": "python run_awq.py --model_name llama-2-7b --task decode --fast_attention --target aie",
+      "run_type": [
+        "daily"
+      ],
+      "devices": [
+        "phoenix",
+        "strix"
+      ]
+    },
+    {
+      "name": "chatglm-6b_quantize_pergrp",
+      "command": "python run_awq.py --model_name THUDM/chatglm-6b --task quantize --algorithm pergrp --target aie",
+      "run_type": [
+        "daily"
+      ],
+      "devices": [
+        "phoenix",
+        "strix"
+      ]
+    },
+    {
+      "name": "chatglm-6b_decode_pergrp",
+      "command": "python run_awq.py --model_name THUDM/chatglm-6b --task decode --algorithm pergrp --target aie",
+      "run_type": [
+        "daily"
+      ],
+      "devices": [
+        "phoenix",
+        "strix"
+      ]
+    },
+    {
+      "name": "CodeLlama-7b-hf_decode",
+      "command": "python run_awq.py --model_name codellama/CodeLlama-7b-hf --task decode --target aie",
+      "run_type": [
+        "daily"
+      ],
+      "devices": [
+        "phoenix",
+        "strix"
+      ]
+    },
+    {
+      "name": "CodeLlama-7b-hf_decode_flash_attention",
+      "command": "python run_awq.py --model_name codellama/CodeLlama-7b-hf --task decode --flash_attention_plus --target aie",
+      "run_type": [
+        "daily"
+      ],
+      "devices": [
+        "phoenix",
+        "strix"
+      ]
+    },
+    {
+      "name": "CodeLlama-7b-hf_decode_flash_attention_awqplus",
+      "command": "python run_awq.py --model_name codellama/CodeLlama-7b-hf --task decode --flash_attention_plus --algorithm awqplus --target aie",
+      "run_type": [
+        "daily"
+      ],
+      "devices": [
+        "phoenix",
+        "strix"
+      ]
+    },
+    {
+      "name": "Qwen-7b_decode",
+      "command": "python run_awq.py --model_name Qwen/Qwen-7b --task decode --target aie",
+      "run_type": [
+        "daily"
+      ],
+      "devices": [
+        "phoenix",
+        "strix"
+      ]
+    },
+    {
+      "name": "Qwen-7b_decode_awqplus",
+      "command": "python run_awq.py --model_name Qwen/Qwen-7b --task decode --target aie --algorithm awqplus",
+      "run_type": [
+        "daily"
+      ],
+      "devices": [
+        "phoenix",
+        "strix"
+      ]
+    },
+    {
+      "name": "chatglm3-6b_quantize_pergrp",
+      "command": "python run_awq.py --model_name THUDM/chatglm3-6b --task decode --target aie --algorithm pergrp",
+      "run_type": [
+        "daily"
+      ],
+      "devices": [
+        "phoenix",
+        "strix"
+      ]
+    },
+    {
+      "name": "chatglm3-6b_decode_pergrp_flash_attention",
+      "command": "python run_awq.py --model_name THUDM/chatglm3-6b --task decode --target aie --algorithm pergrp --flash_attention_plus",
+      "run_type": [
+        "daily"
+      ],
+      "devices": [
+        "phoenix",
+        "strix"
+      ]
+    },
+    {
+      "name": "Mistral-7B-v0_1_decode_pergrp",
+      "command": "python run_awq.py --model_name mistralai/Mistral-7B-v0.1 --task decode --target aie --algorithm pergrp",
+      "run_type": [
+        "daily"
+      ],
+      "devices": [
+        "phoenix",
+        "strix"
+      ]
+    },
+    {
+      "name": "Mistral-7B-v0_1_decode_pergrp_flash_attention_plus",
+      "command": "python run_awq.py --model_name mistralai/Mistral-7B-v0.1 --task decode --target aie --algorithm pergrp --flash_attention_plus",
+      "run_type": [
+        "daily"
+      ],
+      "devices": [
+        "phoenix",
+        "strix"
+      ]
+    },
+    {
+      "name": "phi-2_decode_pergrp",
+      "command": "python run_awq.py --model_name microsoft/phi-2 --task decode --algorithm pergrp --target aie",
+      "run_type": [
+        "daily"
+      ],
+      "devices": [
+        "phoenix",
+        "strix"
+      ]
+    },
+    {
+      "name": "phi-2_decode_pergrp_flash_attention",
+      "command": "python run_awq.py --model_name microsoft/phi-2 --task decode --algorithm pergrp --flash_attention_plus --target aie",
+      "run_type": [
+        "daily"
+      ],
+      "devices": [
+        "phoenix",
+        "strix"
+      ]
+    },
+    {
+      "name": "phi-3_decode_pergrp",
+      "command": "python run_awq.py --model_name microsoft/Phi-3-mini-4k-instruct --task decode --algorithm pergrp --target aie",
+      "run_type": [
+        "daily1"
+      ],
+      "devices": [
+        "phoenix",
+        "strix"
+      ]
+    },
+    {
+      "name": "phi-3_benchmark",
+      "command": "python run_awq.py --model_name microsoft/Phi-3-mini-4k-instruct --task benchmark --algorithm pergrp --target aie",
+      "run_type": [
+        "daily1"
+      ],
+      "devices": [
+        "phoenix",
+        "strix"
+      ]
+    },
+    {
+      "name": "mamba-1_4b-hf_decode_size32",
+      "command": "python run_awq.py --model_name state-spaces/mamba-1.4b-hf --task decode --algorithm pergrp --group_size 32 --target aie",
+      "run_type": [
+        "daily"
+      ],
+      "devices": [
+        "phoenix",
+        "strix"
+      ]
+    },
+    {
+      "name": "mamba-1_4b-hf_decode_size64",
+      "command": "python run_awq.py --model_name state-spaces/mamba-1.4b-hf --task decode --algorithm pergrp --group_size 64 --target aie",
+      "run_type": [
+        "daily"
+      ],
+      "devices": [
+        "phoenix",
+        "strix"
+      ]
+    },
+    {
+      "name": "mamba-2_8b-hf_decode_size64",
+      "command": "python run_awq.py --model_name state-spaces/mamba-2.8b-hf --task decode --algorithm pergrp --group_size 32 --target aie",
+      "run_type": [
+        "daily"
+      ],
+      "devices": [
+        "phoenix",
+        "strix"
+      ]
+    },
+    {
+      "name": "TinyLlama-1_1B-Chat-v1_0_decode",
+      "command": "python run_awq.py --model_name TinyLlama/TinyLlama-1.1B-Chat-v1.0 --task decode --algorithm pergrp --target aie",
+      "run_type": [
+        "daily"
+      ],
+      "devices": [
+        "phoenix",
+        "strix"
+      ]
+    },
+    {
+      "name": "Qwen1_5-7B_decode",
+      "command": "python run_awq.py --model_name Qwen/Qwen1.5-7B --task decode --flash_attention_plus --target aie",
+      "run_type": [
+        "daily"
+      ],
+      "devices": [
+        "phoenix",
+        "strix"
+      ]
+    },
+    {
+      "name": "Qwen1_5-7B_decode_awqplus",
+      "command": "python run_awq.py --model_name Qwen/Qwen1.5-7B --task decode --flash_attention_plus --algorithm awqplus --target aie",
+      "run_type": [
+        "daily"
+      ],
+      "devices": [
+        "phoenix",
+        "strix"
+      ]
+    },
+    {
+      "name": "Qwen1_5-7B_benchmark_awqplus",
+      "command": "python run_awq.py --model_name Qwen/Qwen1.5-7B --task benchmark --flash_attention_plus --algorithm awqplus --target aie",
+      "run_type": [
+        "daily"
+      ],
+      "devices": [
+        "phoenix",
+        "strix"
+      ]
+    },
+    {
+      "name": "bigscience_bloom-560m_cpu",
+      "command": "python run_smoothquant.py --model_name bigscience/bloom-560m --task benchmark --target cpu --precision bf16",
+      "run_type": [
+        "daily"
+      ],
+      "devices": [
+        "phoenix"
+      ]
+    },
+    {
+      "name": "bigscience_bloom-560m_aie",
+      "command": "python run_smoothquant.py --model_name bigscience/bloom-560m --task benchmark --target aie",
+      "run_type": [
+        "daily"
+      ],
+      "devices": [
+        "phoenix"
+      ]
+    },
+    {
+      "name": "OPT-1_3b_benchmark",
+      "command": "python run_awq.py --model_name facebook/opt-1.3b --target aie --task benchmark",
+      "run_type": [
+        "daily"
+      ],
+      "devices": [
+        "phoenix",
+        "strix"
+      ]
+    },
+    {
+      "name": "OPT-1_3b_benchmark_long",
+      "command": "python run_awq.py --model_name facebook/opt-1.3b --target aie --task benchmark_long",
+      "run_type": [
+        "daily"
+      ],
+      "devices": [
+        "phoenix",
+        "strix"
+      ]
+    },
+    {
+      "name": "OPT-1_3b_benchmark_flash_attention_plus",
+      "command": "python run_awq.py --model_name facebook/opt-1.3b --target aie --task benchmark --flash_attention_plus",
+      "run_type": [
+        "daily"
+      ],
+      "devices": [
+        "phoenix",
+        "strix"
+      ]
+    },
+    {
+      "name": "OPT-1_3b_benchmark_long_flash_attention_plus",
+      "command": "python run_awq.py --model_name facebook/opt-1.3b --target aie --task benchmark_long --flash_attention_plus",
+      "run_type": [
+        "daily"
+      ],
+      "devices": [
+        "phoenix",
+        "strix"
+      ]
+    },
+    {
+      "name": "OPT-6_7b_benchmark",
+      "command": "python run_awq.py --model_name facebook/opt-6.7b --target aie --task benchmark",
+      "run_type": [
+        "daily"
+      ],
+      "devices": [
+        "phoenix",
+        "strix"
+      ]
+    },
+    {
+      "name": "OPT-6_7b_benchmark_long",
+      "command": "python run_awq.py --model_name facebook/opt-6.7b --target aie --task benchmark_long",
+      "run_type": [
+        "daily"
+      ],
+      "devices": [
+        "phoenix",
+        "strix"
+      ]
+    },
+    {
+      "name": "OPT-6_7b_benchmark_flash_attention_plus",
+      "command": "python run_awq.py --model_name facebook/opt-6.7b --target aie --task benchmark --flash_attention_plus",
+      "run_type": [
+        "daily"
+      ],
+      "devices": [
+        "phoenix",
+        "strix"
+      ]
+    },
+    {
+      "name": "OPT-6_7b_benchmark_long_flash_attention_plus",
+      "command": "python run_awq.py --model_name facebook/opt-6.7b --target aie --task benchmark_long --flash_attention_plus",
+      "run_type": [
+        "daily"
+      ],
+      "devices": [
+        "phoenix",
+        "strix"
+      ]
+    },
+    {
+      "name": "OPT-1_3b_SmoothQuant_benchmark",
+      "command": "python run_smoothquant.py --model_name facebook/opt-1.3b --task benchmark --target aie --precision w8a8",
+      "run_type": [
+        "daily"
+      ],
+      "devices": [
+        "phoenix",
+        "strix"
+      ]
+    },
+    {
+      "name": "OPT-1_3b_SmoothQuant_benchmark_aie",
+      "command": "python run_smoothquant.py --model_name facebook/opt-1.3b --target aie --task benchmark",
+      "run_type": [
+        "daily"
+      ],
+      "devices": [
+        "phoenix",
+        "strix"
+      ]
+    },
+    {
+      "name": "OPT-1_3b_SmoothQuant_benchmark_long",
+      "command": "python run_smoothquant.py --model_name facebook/opt-1.3b --target aie --task benchmark_long",
+      "run_type": [
+        "daily"
+      ],
+      "devices": [
+        "phoenix",
+        "strix"
+      ]
+    },
+    {
+      "name": "OPT-1_3b_SmoothQuant_benchmark_flash_attention_plus",
+      "command": "python run_smoothquant.py --model_name facebook/opt-1.3b --target aie --task benchmark --flash_attention_plus",
+      "run_type": [
+        "daily"
+      ],
+      "devices": [
+        "phoenix",
+        "strix"
+      ]
+    },
+    {
+      "name": "OPT-1_3b_SmoothQuant_benchmark_long_flash_attention_plus",
+      "command": "python run_smoothquant.py --model_name facebook/opt-1.3b --target aie --task benchmark_long --flash_attention_plus",
+      "run_type": [
+        "daily"
+      ],
+      "devices": [
+        "phoenix",
+        "strix"
+      ]
+    }
+  ],
+  "cleanup": []
+}
